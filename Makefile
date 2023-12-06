@@ -1,4 +1,4 @@
-deps:
+dependencies:
 	pip3 install pipreqs
 	python3 -m pipreqs.pipreqs src --force --savepath requirements.txt
 

@@ -2,15 +2,12 @@ import os
 
 from dotenv import load_dotenv
 from flask import Flask, request
-from flask_json import FlaskJSON, JsonError, as_json, json_response
 
 from routes.blueprint import blueprint
 
 
 def create_app():
     app = Flask(__name__)
-    
-    FlaskJSON(app)
 
     return app
 
