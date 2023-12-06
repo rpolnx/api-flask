@@ -1,6 +1,6 @@
 deps:
 	pip3 install pipreqs
-	python3 -m  pipreqs.pipreqs src --force --savepath requirements.txt
+	python3 -m pipreqs.pipreqs src --force --savepath requirements.txt
 
 envs:
 	python3 -m venv flask_venv

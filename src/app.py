@@ -14,17 +14,14 @@ def create_app():
 
     return app
 
-
-
 if __name__ == '__main__':
     load_dotenv()
 
     app = create_app()
     app.register_blueprint(blueprint, url_prefix='/api/v1')
     
-    host = os.getenv("HOST")
-    port = os.getenv("PORT")
-    
-    env = os.getenv("FLASK_ENV")
+    host = os.getenv("HOST") or "0.0.0.0"
+    port = os.getenv("PORT") or "8080"
+    debug = os.getenv("FLASK_ENV") != "production" or False
 
-    app.run(host, port, debug=env != "production")
+    app.run(host, port, debug)
